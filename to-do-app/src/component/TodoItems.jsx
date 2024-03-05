@@ -1,21 +1,19 @@
-function TodoItem1() {
+import React from 'react'
 
-  let todoName = "Buy Milk";
-  let todoDate = "03/03/2024";
+export default function TodoItems({ todoName ,todoDate}) {
   return (
-    <>
+    <div>
       <div className="container">
         <div className="row kg-row">
           <div className="col-4">{todoName}</div>
           <div className="col-4">{todoDate}</div>
           <div className="col-2">
-            <button type="button" className="btn btn-danger">
+            <button type="button" className="btn btn-danger kg-btn">
               Delete
             </button>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
-export default TodoItem1

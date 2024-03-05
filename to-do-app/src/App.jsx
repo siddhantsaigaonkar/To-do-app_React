@@ -1,21 +1,42 @@
 import React from "react";
 import AppName from "./component/AppName";
 import AddTodo from "./component/AddTodo";
-import TodoItem1 from "./component/TodoItem1";
-import TodoItem2 from "./component/TodoItem2";
+// import TodoItems from "./component/TodoItems";
+import ItemsContainer from "./component/ItemsContainer";
 
 import './App.css'
 
+
 export default function App() {
+
+  let todoItems = [
+    {
+      product: "Butter-Milk",
+      date: "05/03/2023",
+    },
+    {
+      product: "Milk",
+      date: "05/03/2023",
+    },
+    {
+      product: "Curd",
+      date: "05/03/2023",
+    },
+    {
+      product: "Paneer",
+      date: "05/03/2023",
+    },
+    {
+      product: "lassi",
+      date: "06/03/2024"
+    }
+  ];
   return (
     <div>
       <center className="todo-container">
         <AppName />
         <AddTodo />
-        <div className="item-containers">
-          <TodoItem1 />
-          <TodoItem2 />
-        </div>
+        <ItemsContainer todoItems={todoItems}/>
       </center>
     </div>
   );
